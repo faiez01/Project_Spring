@@ -1,0 +1,20 @@
+package Main;
+
+public class PasswordValidator {
+
+	public static boolean isValid(String password) {
+		if (password.length() < 6 || password.length() > 10) {
+			return false;
+		}
+
+		if (!password.matches(".*\\d.*")) {
+			return false; // No digit found
+		}
+
+		if (!password.matches(".*[A-Z].*")) {
+			return false; // No uppercase letter found
+		}
+
+		return true; // All conditions met
+	}
+}

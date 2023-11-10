@@ -1,0 +1,34 @@
+package Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class PasswordValidatorTest {
+
+	@Test
+	void testValidPassword() {
+		assertTrue(PasswordValidator.passwordValidator("Abc123"));
+	}
+
+	@Test
+	void testTooShortPassword() {
+		assertFalse(PasswordValidator.passwordValidator("Ab1"));
+	}
+
+	@Test
+	void testTooLongPassword() {
+		assertFalse(PasswordValidator.passwordValidator("Abcdefghij123"));
+	}
+
+	@Test
+	void testNoDigitPassword() {
+		assertFalse(PasswordValidator.passwordValidator("Abcdefghij"));
+	}
+
+	@Test
+	void testNoUppercaseLetterPassword() {
+		assertFalse(PasswordValidator.passwordValidator("abc123"));
+	}
+}

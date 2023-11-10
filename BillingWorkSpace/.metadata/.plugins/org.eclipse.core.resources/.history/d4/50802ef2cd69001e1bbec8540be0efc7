@@ -1,0 +1,39 @@
+package Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import Main.Loup;
+import Main.Orientation;
+
+class TestLoup {
+
+	private Loup loup;
+
+	@BeforeEach
+	void setUp() {
+		loup = new Loup();
+	}
+
+	@AfterEach
+	void tearDown() {
+		loup = null;
+	}
+
+	@Test
+	void testPositionInitialeAuNord() {
+		assertEquals(Orientation.NORD, loup.getOrientation());
+	}
+
+	@Test
+	public void testTournerUneFois() {
+		Orientation orientationInitiale = loup.getOrientation();
+		loup.tourner();
+		Orientation nouvelleOrientation = loup.getOrientation();
+		// Assert que le loup a tourné dans le sens correct
+		// Exemple : assertEquals(Orientation.EST, nouvelleOrientation);
+	}
+}

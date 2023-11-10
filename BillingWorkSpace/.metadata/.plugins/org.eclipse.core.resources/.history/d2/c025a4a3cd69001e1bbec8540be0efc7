@@ -1,0 +1,13 @@
+package Main;
+
+public class Loup {
+	private Orientation orientation;
+
+	public Loup() {
+		orientation = Orientation.NORD;
+	}
+
+	public Orientation getOrientation() {
+		return orientation;
+	}
+}

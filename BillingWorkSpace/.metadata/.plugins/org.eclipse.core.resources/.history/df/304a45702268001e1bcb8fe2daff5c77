@@ -1,0 +1,47 @@
+package com.example.demo;
+
+import java.util.Date;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
+import com.example.demo.beans.CustomerBean;
+import com.example.demo.model.Bill;
+import com.example.demo.proxies.CustomerServiceProxy;
+
+import lombok.AllArgsConstructor;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients
+@AllArgsConstructor
+public class BillServiceApplication implements CommandLineRunner {
+
+	CustomerServiceProxy customerServiceProxy;
+
+	public static void main(String[] args) {
+		SpringApplication.run(BillServiceApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		// Question 1
+		CustomerBean bean = customerServiceProxy.findCustomerById(1L);
+		System.out.println(bean.getName());
+		// Question 2
+		/*Bill bill=new Bill();
+		bill.setBillingdate(new Date());
+		bill.setCustomerID(1L);
+		bill.se*/
+
+		// Question 3
+
+		// Question 4
+
+	}
+
+}

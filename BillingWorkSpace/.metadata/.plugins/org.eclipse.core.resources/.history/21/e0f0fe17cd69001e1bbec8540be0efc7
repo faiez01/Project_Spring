@@ -1,0 +1,32 @@
+package Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import Main.Loup;
+
+class TestLoup {
+
+    private Loup loup;
+
+    @BeforeEach
+    void setUp() {
+        loup = new Loup();
+    }
+
+    @AfterEach
+    void tearDown() {
+        loup = null;
+    }
+
+    @Test
+    void testPositionInitialeAuNord() {
+        assertEquals(Orientation.NORD, loup.getOrientation());
+    }
+
+    // You can add more test methods to check other behaviors of the Loup class.
+}
+OFS

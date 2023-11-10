@@ -1,0 +1,34 @@
+package Test;
+
+package Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import Main.LeapYear;
+
+public class LeapYearTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+		// Set up any necessary resources or state before each test method.
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		// Clean up any resources after each test method.
+	}
+
+	@Test
+	void testIsLeapYear() {
+		assertTrue(LeapYear.isLeapYear(2000));
+		assertTrue(LeapYear.isLeapYear(2020));
+		assertTrue(LeapYear.isLeapYear(2400));
+		assertFalse(LeapYear.isLeapYear(1900));
+		assertFalse(LeapYear.isLeapYear(2022));
+	}
+}

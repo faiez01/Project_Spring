@@ -1,0 +1,13 @@
+package com.example.demo.beans;
+
+import lombok.Data;
+
+@Data
+class CustomerBean {
+//il faut définir les même
+	attributs que
+	la classe customer
+	private Long id;
+	private String name;
+	private String email;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.example.demo.proxies.CustomerServiceProxy"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Bill"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.example.demo.beans.CustomerBean"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Transient"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.BillRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.proxies.InventoryServiceProxy"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.ProductItem"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.ProductItemRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.beans.ProductBean"/>
+</qualifiedTypeNameHistroy>

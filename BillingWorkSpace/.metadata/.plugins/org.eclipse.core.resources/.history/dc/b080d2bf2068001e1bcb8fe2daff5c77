@@ -1,0 +1,8 @@
+package com.example.demo.proxies;
+
+@FeignClient(name = "CUSTOMER-SERVICE")
+ public interface CustomerServiceProxy{
+@GetMapping("/customers/{id}")
+public CustomerBean findCustomerById(@PathVariable(name = "id") Long
+id);
+}

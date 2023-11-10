@@ -1,0 +1,61 @@
+package Test;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import Main.Loup;
+import Main.Orientation;
+
+class TestLoup {
+
+	private Loup loup;
+
+	@BeforeEach
+	void setUp() {
+		loup = new Loup();
+	}
+
+	@AfterEach
+	void tearDown() {
+		loup = null;
+	}
+
+	@Test
+	void testPositionInitialeAuNord() {
+		assertEquals(Orientation.NORD, loup.getOrientation());
+	}
+
+	@Test
+	void testTournerUneFois() {
+		Orientation orientationInitiale = loup.getOrientation();
+		loup.tourner();
+		Orientation nouvelleOrientation = loup.getOrientation();
+		// Assert that the Loup has turned in the correct direction
+		// Example: assertEquals(Orientation.EST, nouvelleOrientation);
+	}
+
+	@Test
+	void testTournerDeuxFois() {
+		Orientation orientationInitiale = loup.getOrientation();
+		loup.tourner();
+		loup.tourner();
+		Orientation nouvelleOrientation = loup.getOrientation();
+		// Assert that the Loup has turned twice in the correct direction
+		// Example: assertEquals(Orientation.SUD, nouvelleOrientation);
+	}
+
+	@Test
+	void testTournerTroisFois() {
+		Orientation orientationInitiale = loup.getOrientation();
+		loup.tourner();
+		loup.tourner();
+		loup.tourner();
+		Orientation nouvelleOrientation = loup.getOrientation();
+		// Assert that the Loup has turned three times in the correct direction
+		// Example: assertEquals(Orientation.OUEST, nouvelleOrientation);
+	}
+
+	// You can add more test methods to cover various scenarios and edge cases.
+}
